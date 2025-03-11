@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script> 
+
+    function getComputerChoice() {
+        
+        let x = Math.random();
+    
+        if (x <= 0.33) 
+        {computerChoice = "Rock";} 
+        else if (x <= 0.66) 
+        {computerChoice = "Paper";}
+        else 
+        {computerChoice = "Scissors";} 
+        return computerChoice;
+        }
+   
+    function getHumanChoice() {
+        const humanChoice = window.prompt("Please enter your move:"); 
+        if (humanChoice !==null) {
+        return humanChoice;
+        } else return null;
+        } 
+
+    function updateScore() {
+        if (playRound(humanSelection,computerSelection).includes("win")) { 
+            return humanScore++;
+        } else if (playRound(humanSelection,computerSelection).includes("lose")) {
+            return computerScore++;
+        } else;
+        }
+
+function playRound(humanChoice, computerChoice) {
+
+if (humanChoice.toUpperCase() === computerChoice.toUpperCase()) {
+    return "It's a draw!";
+} else if ((humanChoice.toUpperCase() === 'ROCK' && computerChoice.toUpperCase() === 'SCISSORS') ||
+          (humanChoice.toUpperCase() === 'PAPER' && computerChoice.toUpperCase() === 'ROCK') ||
+          (humanChoice.toUpperCase() === 'SCISSORS' && computerChoice.toUpperCase() === 'PAPER')) 
+    {return `You win! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice}.`;}
+ else if ((humanChoice.toUpperCase() === 'ROCK' && computerChoice.toUpperCase() === 'PAPER') ||
+        (humanChoice.toUpperCase() === 'PAPER' && computerChoice.toUpperCase() === 'SCISSORS') ||
+        (humanChoice.toUpperCase() === 'SCISSORS' && computerChoice.toUpperCase() === 'ROCK'))
+     {return `You lose! ${computerChoice} beats ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)}.`;}
+else {return "Invalid play: Please enter rock, paper or scissors!.";}
+}
+
+let humanScore = 0;
+let computerScore = 0;  
+
+function playGame() {
+
+for (let i = 0; i < 5; i++) {
+
+const humanSelection = window.prompt("Round " + (i + 1) + ": Please enter your move:");
+const computerSelection = getComputerChoice();
+const result = playRound(humanSelection, computerSelection);
+console.log(result);
+
+if (result.includes("win")) { 
+     humanScore++;
+    } else if (result.includes("lose")) {
+     computerScore++;
+    } else;
+    }
+    console.log(humanScore);
+    console.log(computerScore);
+}
+
+console.log(playGame());
+
+/* console.log(playRound(humanSelection,computerSelection));
+console.log(updateScore()); */
+
+</script>
+
+</body>
+</html>

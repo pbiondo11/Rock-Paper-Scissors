@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(221, 221, 221, 0.877);
+}
+
+body {
+    font-size: 20px;
+    
+   
+}
+.header-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+body {
+    margin: auto 25px;
+    padding: 20px;
+}
+
+img {
+    height: 175px;
+    width: 275px;
+}
+
+div .player-box-container{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+div .comp-box-container{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column; 
+    align-items: flex-end;
+    gap: 5px;
+}
+
+
+div .player-box {
+    height: 35px;
+    width: 35px;
+    border: 2px solid red;
+}
+
+.player-choice-container {
+    
+    padding: 15px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#start-up {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+#outcome  {
+display: flex;
+justify-content: center;
+
+font-size: 25px;
+}
+
+#player-img img, #comp-img img{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.playagainbutton {
+display: flex;
+justify-content: center;
+}
+
+.container {
+border: 2px solid rgb(17, 17, 17);
+width: 775px;  /* Set a fixed width */
+height: 325px; /* Set a fixed height */ 
+background-color: white;
+}
+
+.img-container{
+    margin-top: 100px;
+}
+
+ .container-1{
+    padding: 15px;
+    border: 2px solid black;
+    background-color: rgb(199, 109, 109);
+ }
+ 
+ .container-2 {
+    
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+
+    background-color: rgb(168, 213, 219);
+ }
+
+ 
